@@ -1,12 +1,387 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Candidate Name] for Congress — People Over Party</title>
+  <meta name="description" content="Official campaign website for [Candidate Name], independent candidate putting people over party. Learn about the issues, events, and how to get involved." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="[Candidate Name] — People Over Party" />
+  <meta property="og:description" content="Join the movement to put communities first. Volunteer, donate, and read the plan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png?text=[Candidate+Name]" />
+  <meta property="og:url" content="https://<your-username>.github.io/<repo-name>/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230ea5e9'/><text x='50' y='59' font-size='48' text-anchor='middle' fill='white'>★</text></svg>">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js for small interactivity -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    /* Smooth underline for nav links */
+    .nav-underline { position: relative; }
+    .nav-underline::after { content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: currentColor; transition: width .2s ease; }
+    .nav-underline:hover::after { width: 100%; }
+  </style>
+  <script>
+    // Tailwind config (optional brand palette)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#ecfeff',100:'#cffafe',200:'#a5f3fc',300:'#67e8f9',400:'#22d3ee',500:'#06b6d4',600:'#0891b2',700:'#0e7490',800:'#155e75',900:'#164e63'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "[Candidate Name]",
+    "jobTitle": "Candidate for Congress",
+    "image": "https://placehold.co/600x600/png?text=[Headshot]",
+    "sameAs": [
+      "https://twitter.com/yourhandle",
+      "https://www.linkedin.com/in/yourprofile"
+    ],
+    "url": "https://<your-username>.github.io/<repo-name>/"
+  }
+  </script>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is my first webpage.</p>
+<body x-data="{ mobileOpen:false, dark:false }" x-init="dark = window.matchMedia('(prefers-color-scheme: dark)').matches" :class="{'dark': dark}" class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/80 dark:bg-slate-950/70 border-b border-slate-200/70 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-2 font-semibold">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-white">★</span>
+          <span>[Candidate Name]</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="nav-underline" href="#issues">Issues</a>
+          <a class="nav-underline" href="#bio">Bio</a>
+          <a class="nav-underline" href="#plan">Plan</a>
+          <a class="nav-underline" href="#events">Events</a>
+          <a class="nav-underline" href="#news">News</a>
+          <a class="nav-underline" href="#volunteer">Volunteer</a>
+          <a class="nav-underline" href="#faq">FAQ</a>
+          <a class="px-3 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700" href="#donate">Donate</a>
+          <button @click="dark = !dark" class="px-2 py-2 rounded-lg border border-slate-200 dark:border-slate-700" :aria-label="dark ? 'Switch to light mode' : 'Switch to dark mode'">
+            <span x-show="!dark">🌙</span>
+            <span x-show="dark">☀️</span>
+          </button>
+        </nav>
+        <button class="md:hidden text-2xl" @click="mobileOpen = !mobileOpen" aria-label="Open Menu">☰</button>
+      </div>
+    </div>
+    <div x-show="mobileOpen" x-transition class="md:hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-3">
+        <a href="#issues" @click="mobileOpen=false">Issues</a>
+        <a href="#bio" @click="mobileOpen=false">Bio</a>
+        <a href="#plan" @click="mobileOpen=false">Plan</a>
+        <a href="#events" @click="mobileOpen=false">Events</a>
+        <a href="#news" @click="mobileOpen=false">News</a>
+        <a href="#volunteer" @click="mobileOpen=false">Volunteer</a>
+        <a href="#faq" @click="mobileOpen=false">FAQ</a>
+        <a href="#donate" @click="mobileOpen=false" class="inline-flex items-center justify-center px-3 py-2 rounded-xl bg-brand-600 text-white">Donate</a>
+        <button @click="dark = !dark; mobileOpen=false" class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 w-fit">Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 to-white dark:from-slate-900 dark:to-slate-950"></div>
+    <div class="max-w-6xl mx-auto px-4 py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">People Over Party. <span class="text-brand-600">It’s time for an independent voice.</span></h1>
+        <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">[Candidate Name] is running as an Independent to put communities first: safe streets, good jobs, trusted government. No corporate PAC money. No party bosses.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#donate" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-600 text-white hover:bg-brand-700 font-semibold">Donate</a>
+          <a href="#volunteer" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-900">Volunteer</a>
+          <a href="#issues" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-transparent hover:border-slate-300 dark:hover:border-slate-700">Read the Issues →</a>
+        </div>
+        <p class="mt-4 text-xs text-slate-500">Paid for by Friends of [Candidate Name].</p>
+      </div>
+      <div class="relative">
+        <img src="https://placehold.co/800x600/png?text=Campaign+Photo" alt="[Candidate Name] speaking with neighbors" class="rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800"/>
+        <div class="absolute -bottom-6 -right-6 bg-white/90 dark:bg-slate-900/90 rounded-2xl shadow-xl p-4 ring-1 ring-slate-200 dark:ring-slate-700">
+          <p class="font-semibold">Grassroots, not gridlock</p>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Ballot access secured • 100% small-dollar powered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Issues -->
+  <section id="issues" class="py-16 border-t border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold">The Issues</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Clear, practical solutions. Replace talking points with town-hall common sense.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Issue Card -->
+        <article class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <div class="text-3xl">🏥</div>
+          <h3 class="mt-2 font-semibold text-lg">Affordable, Reliable Healthcare</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Crack down on price gouging, expand transparent pricing, protect rural hospitals, and support caregivers.</p>
+          <details class="mt-3 text-sm">
+            <summary class="cursor-pointer text-brand-600">Read more</summary>
+            <ul class="list-disc ml-5 mt-2 space-y-1">
+              <li>Ban surprise medical billing & enforce all-in pricing.</li>
+              <li>Support telehealth & mental health coverage parity.</li>
+              <li>Tax credits for family caregivers and home care.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <div class="text-3xl">💼</div>
+          <h3 class="mt-2 font-semibold text-lg">Jobs & Small Business</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Cut red tape for startups, invest in skilled trades, and onshore strategic manufacturing.</p>
+          <details class="mt-3 text-sm">
+            <summary class="cursor-pointer text-brand-600">Read more</summary>
+            <ul class="list-disc ml-5 mt-2 space-y-1">
+              <li>Tax simplicity for micro‑businesses and sole proprietors.</li>
+              <li>Apprenticeships and paid trade training pathways.</li>
+              <li>Public‑private grants for local manufacturing hubs.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <div class="text-3xl">🛡️</div>
+          <h3 class="mt-2 font-semibold text-lg">Trust in Government</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">End the revolving door, publish every vote & meeting, and secure our elections.</p>
+          <details class="mt-3 text-sm">
+            <summary class="cursor-pointer text-brand-600">Read more</summary>
+            <ul class="list-disc ml-5 mt-2 space-y-1">
+              <li>Lifetime ban on lobbying for former members of Congress.</li>
+              <li>Real‑time disclosure of meetings & earmarks.</li>
+              <li>Paper backups and routine audits for elections.</li>
+            </ul>
+          </details>
+        </article>
+      </div>
+
+      <!-- Downloadable one‑pager -->
+      <div class="mt-8 p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-800">
+        <p class="font-semibold">Press or organizers?</p>
+        <p class="text-sm text-slate-600 dark:text-slate-300">Get the campaign one‑pager for events and introductions.</p>
+        <a class="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-white dark:hover:bg-slate-800" href="#" download>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section id="bio" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+      <div>
+        <img src="https://placehold.co/900x900/png?text=Headshot" alt="Headshot of [Candidate Name]" class="rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800"/>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold">Meet [Candidate Name]</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Add a short, human story: service, work, caregiving, military, small business—ground it in local community. Keep it real and specific.</p>
+        <ul class="mt-4 space-y-2 text-slate-700 dark:text-slate-300">
+          <li>• Lifelong [state/district] neighbor; public school volunteer.</li>
+          <li>• 15+ years in tech & small business, focused on results.</li>
+          <li>• Proud parent / caregiver / veteran (choose what fits).</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#events" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Come to a town hall</a>
+          <a href="#news" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700">Read recent news</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Plan -->
+  <section id="plan" class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold">Day‑One Plan</h2>
+      <ol class="mt-6 grid md:grid-cols-3 gap-6 list-decimal ml-6">
+        <li class="p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="font-semibold">Anti‑corruption package</p>
+          <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Ban corporate PAC money, close loopholes, and publish meetings.</p>
+        </li>
+        <li class="p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="font-semibold">Cost‑of‑living relief</p>
+          <p class="text-sm mt-1">Cut junk fees, support childcare credits, and boost workforce housing.</p>
+        </li>
+        <li class="p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="font-semibold">Public safety & trust</p>
+          <p class="text-sm mt-1">Fund local policing with accountability; expand treatment & prevention.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold">Upcoming Events</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Town halls, canvasses, meet‑and‑greets. Add your Google Calendar embed or a simple list.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <article class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <p class="text-sm text-slate-500">Sat • Oct 12 • 10:00 AM</p>
+          <h3 class="font-semibold">Neighborhood Canvass — Brookfield</h3>
+          <p class="text-sm mt-1">Meet at 123 Main St. Training provided. Family friendly.</p>
+          <a href="#volunteer" class="mt-3 inline-block px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700">RSVP</a>
+        </article>
+        <article class="p-6 rounded-2xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <p class="text-sm text-slate-500">Thu • Oct 24 • 7:00 PM</p>
+          <h3 class="font-semibold">Town Hall — Downtown Library</h3>
+          <p class="text-sm mt-1">Open Q&A. Bring your toughest questions.</p>
+          <a href="#volunteer" class="mt-3 inline-block px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700">RSVP</a>
+        </article>
+      </div>
+
+      <!-- Optional Google Calendar embed -->
+      <div class="mt-8 aspect-video rounded-2xl overflow-hidden ring-1 ring-slate-200 dark:ring-slate-800">
+        <!-- Replace src with your public Google Calendar embed URL -->
+        <iframe title="Campaign Events Calendar" class="w-full h-full" src="about:blank" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="py-16 bg-slate-50 dark:bg-slate-900 border-y border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold">News & Updates</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="group p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-xs text-slate-500">Press Release</p>
+          <h3 class="mt-1 font-semibold group-hover:underline">[Candidate] qualifies for the ballot</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Thanks to volunteers across the district, we’re officially on the ballot. Here’s what’s next…</p>
+          <a href="#" class="mt-3 inline-block text-sm text-brand-600">Read more →</a>
+        </article>
+        <article class="group p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-xs text-slate-500">Blog</p>
+          <h3 class="mt-1 font-semibold group-hover:underline">Our small‑business plan</h3>
+          <p class="mt-2 text-sm">Real steps to cut red tape and boost hiring.</p>
+          <a href="#" class="mt-3 inline-block text-sm text-brand-600">Read more →</a>
+        </article>
+        <article class="group p-6 rounded-2xl bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-xs text-slate-500">Endorsement</p>
+          <h3 class="mt-1 font-semibold group-hover:underline">Local veterans group backs [Candidate]</h3>
+          <p class="mt-2 text-sm">Service before politics: why they’re supporting our campaign.</p>
+          <a href="#" class="mt-3 inline-block text-sm text-brand-600">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteer / Contact -->
+  <section id="volunteer" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-bold">Join the Campaign</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Sign up to knock doors, make calls, or host a house meeting. (Form via Formspree or email link.)</p>
+          <form class="mt-6 grid grid-cols-1 gap-4" action="https://formspree.io/f/yourformid" method="POST">
+            <label class="grid gap-1">Full name <input required name="name" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" /></label>
+            <label class="grid gap-1">Email <input required name="email" type="email" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" /></label>
+            <label class="grid gap-1">Phone <input name="phone" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" /></label>
+            <label class="grid gap-1">Zip code <input name="zip" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" /></label>
+            <label class="grid gap-1">I can help with
+              <select name="interest" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+                <option>Door knocking</option>
+                <option>Phone banking</option>
+                <option>Data & tech</option>
+                <option>Hosting an event</option>
+              </select>
+            </label>
+            <label class="grid gap-1">Message
+              <textarea name="message" rows="4" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></textarea>
+            </label>
+            <button class="mt-2 inline-flex justify-center px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Sign up</button>
+            <p class="text-xs text-slate-500">We’ll never sell your data. By submitting, you consent to campaign updates.</p>
+          </form>
+        </div>
+        <aside class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h3 class="font-semibold">Contact</h3>
+          <p class="text-sm mt-1">Prefer email? Reach out anytime.</p>
+          <p class="mt-2"><a class="text-brand-600" href="mailto:hello@candidate.org">hello@candidate.org</a></p>
+          <div class="mt-4 flex gap-3">
+            <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="https://twitter.com/yourhandle">Twitter/X</a>
+            <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="https://www.instagram.com/yourhandle">Instagram</a>
+            <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="https://www.facebook.com/yourpage">Facebook</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate CTA -->
+  <section id="donate" class="py-16 bg-gradient-to-b from-white to-brand-50 dark:from-slate-950 dark:to-slate-900">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-extrabold">Chip in to power this campaign</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">No corporate PAC money. Every dollar funds field organizing and voter outreach.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <!-- Replace links with your donation processor (e.g., Donorbox, Anedot, Stripe, PayPal) -->
+          <a class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700" href="https://www.paypal.com/donate">Donate $10</a>
+          <a class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700" href="https://www.paypal.com/donate">Donate $25</a>
+          <a class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700" href="https://www.paypal.com/donate">Donate $50</a>
+          <a class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="https://www.paypal.com/donate">Other amount</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Contributions are not tax‑deductible. By donating, you certify you are a U.S. citizen or lawful permanent resident making this contribution from your own funds.</p>
+      </div>
+      <img src="https://placehold.co/800x500/png?text=Community+Event" alt="Neighbors at a campaign event" class="rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800"/>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 border-t border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+      <div class="mt-6 space-y-4">
+        <details class="p-4 rounded-xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <summary class="font-semibold cursor-pointer">Why run as an Independent?</summary>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">To represent people, not parties. We focus on practical wins over partisan fights.</p>
+        </details>
+        <details class="p-4 rounded-xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <summary class="font-semibold cursor-pointer">How can I vote for you?</summary>
+          <p class="mt-2">Add a link to your state’s official voter portal for registration, absentee ballots, and polling places.</p>
+        </details>
+        <details class="p-4 rounded-xl ring-1 ring-slate-200 dark:ring-slate-800 bg-white dark:bg-slate-900">
+          <summary class="font-semibold cursor-pointer">Will you take corporate PAC money?</summary>
+          <p class="mt-2">No. This campaign is powered by small dollar donors and volunteers.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-start">
+      <div>
+        <p class="font-semibold">[Candidate Name]</p>
+        <p class="text-sm text-slate-600 dark:text-slate-300">People Over Party</p>
+        <p class="mt-3 text-xs text-slate-500">Paid for by Friends of [Candidate Name]</p>
+      </div>
+      <nav class="grid gap-2 text-sm">
+        <a href="#issues">Issues</a>
+        <a href="#plan">Plan</a>
+        <a href="#events">Events</a>
+        <a href="#news">News</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#donate">Donate</a>
+      </nav>
+      <form class="grid gap-2" action="https://formspree.io/f/yourformid" method="POST">
+        <label class="text-sm font-semibold">Get email updates</label>
+        <input type="email" name="email" placeholder="you@example.com" class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900" required/>
+        <button class="px-3 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Subscribe</button>
+        <p class="text-xs text-slate-500">Privacy‑first: unsubscribe anytime.</p>
+      </form>
+    </div>
+  </footer>
+
+  <!-- Minimal analytics (replace with your provider; leave empty by default) -->
+  <!-- <script defer data-domain="yourdomain.org" src="https://plausible.io/js/script.js"></script> -->
 </body>
 </html>
