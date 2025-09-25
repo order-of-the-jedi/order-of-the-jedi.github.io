@@ -5,3 +5,4 @@ document.addEventListener('click', (e) => {
     const el = document.getElementById(id);
     if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 });
+document.getElementById('yearSpan').textContent = new Date().getFullYear();
