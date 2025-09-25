@@ -1,0 +1,11 @@
+.bg-grid {
+    background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+.glass { backdrop-filter: blur(8px); }
+.btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold shadow-soft transition; }
+.btn-primary { @apply bg-robblue text-white hover:brightness-110; }
+.btn-contrast { @apply bg-white text-night hover:bg-slate-100; }
+.link-cta { @apply underline decoration-2 underline-offset-4 decoration-robblue hover:opacity-90; }
+#header-long-logo { width: 200px; }
+#footer-long-logo { width: 240px; }
