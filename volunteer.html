@@ -103,14 +103,13 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<audio id="my_audio" src="TheRun.m4a" loop="loop"></audio>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.simplebanner.min.js"></script>
 <script>
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
+    $(document).ready(function() {
+        $('#rotating').simplebanner();
+    });
 </script>
 
 </body>

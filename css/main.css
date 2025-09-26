@@ -16,7 +16,7 @@ img {
 
 .donate-button {
     background-color: #d5302a;
-    color: #ffffff;
+    color: #ffffff !important;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -30,7 +30,7 @@ img {
 }
 
 .donate-button a {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .donate-button:hover {
@@ -75,6 +75,7 @@ img {
 .nav-link a:hover {
     color: #d5302a;
 }
+
 
 #frontpage {
     background-image: url("../images/background.jpeg");
