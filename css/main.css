@@ -1,11 +1,82 @@
-.bg-grid {
-    background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    background-size: 24px 24px;
+img {
+    width: 100%;
+    height: auto;
 }
-.glass { backdrop-filter: blur(8px); }
-.btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold shadow-soft transition; }
-.btn-primary { @apply bg-robblue text-white hover:brightness-110; }
-.btn-contrast { @apply bg-white text-night hover:bg-slate-100; }
-.link-cta { @apply underline decoration-2 underline-offset-4 decoration-robblue hover:opacity-90; }
-#header-long-logo { width: 200px; }
-#footer-long-logo { width: 240px; }
+
+.bg-blue {
+    background-color: #14386e !important;
+}
+
+.bg-blue a {
+    color: #167fbf !important;
+}
+
+.nav-link a {
+    color: #167fbf;
+}
+
+.nav-bar-toggler {
+    color: #167fbf !important;
+}
+
+.nav-link a:hover {
+    color: #d5302a;
+}
+
+#frontpage {
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-size: cover; /* Scales the image to cover the entire viewport while maintaining aspect ratio */
+    background-position: center center; /* Centers the image horizontally and vertically */
+    margin: 0; /* Removes default body margin */
+    height: 100vh;
+    color: #167fbf
+}
+.simpleBanner {
+    padding-top:50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headshot {
+    padding-top: 50px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.sponsors.list-group {
+    text-align: center !important;
+    background-color: transparent !important;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
+}
+
+.card {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
+}
+.socialMediaLinks a {
+    font-size: 26px;
+    margin: 0 10px 0 0;
+    color: #167fbf;
+    text-decoration: none;
+}

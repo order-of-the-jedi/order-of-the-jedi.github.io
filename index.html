@@ -1,374 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rob Tompkins for Congress | VA‑04</title>
-    <meta name="description" content="Official campaign site for Rob Tompkins for Congress in Virginia's 4th District — community, opportunity, and common sense for all." />
 
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="Rob Tompkins for Congress | VA‑04" />
-    <meta property="og:description" content="Community, opportunity, and common sense for all." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://robtompkins.com/" />
-    <meta property="og:image" content="/assets/rob-hero-1600.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-    <link rel="alternate icon" href="assets/favicon.ico" />
-    <link rel="mask-icon" href="assets/logo.svg" color="#2A8AFF" />
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="google-site-verification" content="OLLci-g43Mfx6SNqkjFNGCJZayg4T_c88S3lbFl6eaY" />
+    <title>Rob Tompkins</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/jquery.simplebanner.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              robred: { DEFAULT: '#8B272D' },
-              robblue: { DEFAULT: '#2A8AFF' },
-              night: '#0B1020'
-            },
-            fontFamily: {
-              display: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-              body: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
-            },
-            boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.10)' }
-          }
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            padding-top: 54px;
         }
-      }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Rob Tompkins for Congress",
-      "url": "https://robtompkins.com/",
-      "logo": "/assets/logo.svg",
-      "sameAs": ["https://github.com/chtompki", "https://www.linkedin.com/in/chtompki"]
-    }
-    </script>
-  </head>
+        @media (min-width: 992px) {
+            body {
+                padding-top: 56px;
+            }
+        }
 
-  <body class="font-body text-slate-900 bg-white">
-    <div class="w-full bg-robred text-white text-sm">
-      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-        <p class="font-medium">Grassroots-powered. No corporate PAC money.</p>
-        <a href="#donate" class="link-cta">Chip in →</a>
-      </div>
-    </div>
+    </style>
 
-    <header class="sticky top-0 z-50 bg-white/80 glass border-b border-slate-200">
-      <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center">
-        <a href="#home" class="flex items-center gap-3">
-          <img id="header-long-logo" src="/assets/long-logo.svg" alt="Rob Tompkins" class="h-10 object-contain" />
-        </a>
-        <div class="ml-auto hidden md:flex items-center gap-6 text-sm font-semibold">
-          <a href="#issues" class="hover:text-robblue">Issues</a>
-          <a href="#about" class="hover:text-robblue">About</a>
-          <a href="#family" class="hover:text-robblue">Family</a>
-          <a href="#events" class="hover:text-robblue">Events</a>
-          <a href="#news" class="hover:text-robblue">News</a>
-          <a href="#volunteer" class="hover:text-robblue">Volunteer</a>
-        </div>
-        <div class="ml-4 hidden md:flex items-center gap-3">
-          <a href="#donate" class="btn btn-primary">Donate</a>
-        </div>
-        <button id="menuBtn" class="ml-auto md:hidden p-2 rounded-lg border border-slate-300" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</head>
+
+<body id="frontpage">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-blue fixed-top ">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/RobTompkins.svg" alt="Rob Tompkins" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      </nav>
-      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
-        <div class="px-4 py-3 grid gap-3 text-sm font-semibold">
-          <a href="#issues" class="hover:text-robblue">Issues</a>
-          <a href="#about" class="hover:text-robblue">About</a>
-          <a href="#family" class="hover:text-robblue">Family</a>
-          <a href="#events" class="hover:text-robblue">Events</a>
-          <a href="#news" class="hover:text-robblue">News</a>
-          <a href="#volunteer" class="hover:text-robblue">Volunteer</a>
-          <a href="#donate" class="btn btn-primary mt-2">Donate</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
         </div>
-      </div>
-      <script>
-        const btn = document.getElementById('menuBtn');
-        const mm = document.getElementById('mobileMenu');
-        btn?.addEventListener('click', () => mm?.classList.toggle('hidden'));
-      </script>
-    </header>
+    </div>
+</nav>
 
-    <section id="home" class="relative isolate overflow-hidden">
-      <div class="absolute inset-0 -z-10">
-        <picture>
-          <source srcset="/assets/rob-hero-2400.webp" media="(min-width: 1024px)" type="image/webp" />
-          <source srcset="/assets/rob-hero-1600.webp" media="(max-width: 1023px)" type="image/webp" />
-          <img src="/assets/rob-hero-1600.webp" alt="Rob Tompkins in a Richmond neighborhood" class="h-full w-full object-cover object-top" />
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-b from-night/70 via-night/50 to-white/0"></div>
-        <div class="absolute inset-0 bg-grid"></div>
-      </div>
-      <div class="max-w-7xl mx-auto px-4 pt-28 pb-20">
-        <div class="max-w-2xl text-white">
-          <p class="uppercase tracking-widest font-bold text-xs md:text-sm text-white/80">Virginia's 4th Congressional District</p>
-          <h1 class="font-display font-extrabold text-4xl md:text-6xl leading-tight mt-3">A Future Built by Us — <span class="text-robblue">Not for Us</span></h1>
-          <p class="mt-5 text-lg md:text-xl text-white/85">I’m Rob Tompkins. Engineer, open‑source leader, caregiver, and community builder. Let’s bring common sense, innovation, and compassion to Washington.</p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#donate" class="btn btn-primary">Donate</a>
-            <a href="#volunteer" class="btn btn-contrast">Volunteer</a>
-          </div>
-          <p class="mt-6 text-sm text-white/80">By providing your phone number, you agree to receive periodic SMS from the campaign. Msg & data rates may apply. Text STOP to opt out.</p>
-        </div>
-      </div>
-    </section>
+<!-- Page Content -->
+<footer class="bg-blue fixed-bottom">
 
-    <section id="issues" class="py-20 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="max-w-3xl">
-          <h2 class="font-display font-extrabold text-3xl md:text-4xl">What Rob’s Fighting For</h2>
-          <p class="mt-3 text-slate-600">Real solutions for real people — from lowering costs to protecting rights and unlocking new jobs in clean energy and technology.</p>
+    <div class="row ">
+        <div class="sponsors col-lg-12 card border-0 align-items-center">
+            <ul class="list-group list-group-horizontal socialMediaLinks">
+                <li id="facebook-logo" class="card list-group-item border-0">
+                    <a href="https://www.facebook.com/chtompki">
+                        <i class="fa fa-facebook-f" style="font-size:24px"></i>
+                    </a>
+                </li>
+                <li id="github-logo" class="card list-group-item border-0">
+                    <a href="https://github.com/chtompki">
+                        <i class="fa fa-github" style="font-size:24px"></i>
+                    </a>
+                </li>
+                <li id="instagram-logo" class="card list-group-item border-0">
+                    <a href="https://instagram.com/chtompki">
+                        <i class="fa fa-instagram" style="font-size:24px"></i>
+                    </a>
+                </li>
+                <li id="linkedin-logo" class="card list-group-item border-0">
+                    <a href="https://linkedin.com/in/chtompki">
+                        <i class="fa fa-linkedin" style="font-size:24px"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="mt-10 grid md:grid-cols-3 gap-6">
-          <article class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <div class="h-10 w-10 rounded-lg bg-robblue/10 text-robblue flex items-center justify-center font-extrabold">1</div>
-            <h3 class="mt-4 font-bold text-lg">Lower Costs & Better Care</h3>
-            <p class="mt-2 text-slate-600">Cap prescription costs, protect Medicare, and expand home‑care support so families aren’t bankrupted caring for loved ones.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read more</a>
-          </article>
-          <article class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <div class="h-10 w-10 rounded-lg bg-robblue/10 text-robblue flex items-center justify-center font-extrabold">2</div>
-            <h3 class="mt-4 font-bold text-lg">Good Jobs Through Innovation</h3>
-            <p class="mt-2 text-slate-600">Invest in apprenticeships, small business, and clean energy manufacturing — with training pipelines right here in VA‑04.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read more</a>
-          </article>
-          <article class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <div class="h-10 w-10 rounded-lg bg-robblue/10 text-robblue flex items-center justify-center font-extrabold">3</div>
-            <h3 class="mt-4 font-bold text-lg">Freedom & Democracy</h3>
-            <p class="mt-2 text-slate-600">Protect voting rights, reproductive freedom, and the rule of law. Our liberties are not negotiable.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read more</a>
-          </article>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h5>© 2009-2025 Rob Tompkins</h5>
         </div>
-      </div>
-    </section>
+    </div>
+</footer>
 
-    <section id="about" class="py-20">
-      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <picture>
-          <source srcset="/assets/rob-portrait-1200.webp" media="(min-width: 768px)" type="image/webp" />
-          <source srcset="/assets/rob-portrait-800.webp" media="(max-width: 767px)" type="image/webp" />
-          <img src="/assets/rob-portrait-800.webp" alt="Rob Tompkins standing in a neighborhood yard wearing a US Canoe/Kayak jacket and NASA cap" class="rounded-2xl shadow-soft w-full object-cover" loading="lazy" />
-        </picture>
-        <div>
-          <h2 class="font-display font-extrabold text-3xl md:text-4xl">Meet Rob</h2>
-          <p class="mt-4 text-slate-700 leading-relaxed">Rob Tompkins is a software engineer, open‑source leader at the Apache Software Foundation, and a lifelong Virginian. He’s also a caregiver who navigated our health system firsthand after a family accident. Rob believes government should be an engine for opportunity — practical, transparent, and on your side.</p>
-          <ul class="mt-6 space-y-3 text-slate-700">
-            <li>• <strong>Builder:</strong> Led cloud & security projects used by millions.</li>
-            <li>• <strong>Caregiver:</strong> 15+ years advocating for affordable, quality home care.</li>
-            <li>• <strong>Community:</strong> From STEM mentorship to veterans’ support.</li>
-          </ul>
-          <a href="#news" class="mt-6 inline-flex link-cta">Read Rob’s story →</a>
-        </div>
-      </div>
-    </section>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.simplebanner.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#rotating').simplebanner();
+});
+</script>
 
-    <section id="family" class="py-20 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <picture>
-            <source srcset="/assets/family-2000.webp" media="(min-width: 1024px)" type="image/webp" />
-            <source srcset="/assets/family-1200.webp" media="(min-width: 640px)" type="image/webp" />
-            <source srcset="/assets/family-800.webp" media="(max-width: 639px)" type="image/webp" />
-            <img src="/assets/family-1200.webp" alt="Rob Tompkins with family on the pedestrian bridge over the James River with Richmond skyline in the background" class="rounded-2xl shadow-soft w-full object-cover" loading="lazy" />
-          </picture>
-        </div>
-        <div>
-          <h2 class="font-display font-extrabold text-3xl md:text-4xl">Family & Roots</h2>
-          <p class="mt-4 text-slate-700 leading-relaxed">Rob is a lifelong Virginian raising his family here in the Richmond area. From weekends on the James to weeknights helping with homework, the Tompkins family keeps Rob grounded in what matters: safe neighborhoods, great schools, and an economy that works for everyone.</p>
-          <ul class="mt-6 space-y-3 text-slate-700">
-            <li>• <strong>Community-first:</strong> Investing in parks, trails, and safe streets.</li>
-            <li>• <strong>Opportunity:</strong> Schools, apprenticeships, and small business support.</li>
-            <li>• <strong>Affordability:</strong> Lower costs for families — from groceries to childcare.</li>
-          </ul>
-          <a href="#issues" class="mt-6 inline-flex link-cta">See the plan →</a>
-        </div>
-      </div>
-    </section>
+</body>
 
-    <section id="events" class="py-20 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-end justify-between gap-6">
-          <div>
-            <h2 class="font-display font-extrabold text-3xl md:text-4xl">Upcoming Events</h2>
-            <p class="mt-2 text-slate-600">Join a canvass, town hall, or volunteer training near you.</p>
-          </div>
-          <a href="#volunteer" class="btn btn-contrast">See all</a>
-        </div>
-        <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <p class="text-sm text-slate-500">Sat • Oct 5 • 10:00 AM</p>
-            <h3 class="mt-2 font-bold">Southside Canvass Launch</h3>
-            <p class="mt-2 text-slate-600">Meet at Jefferson Park. Training provided, all welcome.</p>
-            <a href="#volunteer" class="mt-3 inline-block link-cta">RSVP →</a>
-          </div>
-          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <p class="text-sm text-slate-500">Thu • Oct 10 • 6:30 PM</p>
-            <h3 class="mt-2 font-bold">Town Hall: Lowering Costs</h3>
-            <p class="mt-2 text-slate-600">A conversation on prescription prices & home‑care support.</p>
-            <a href="#volunteer" class="mt-3 inline-block link-cta">RSVP →</a>
-          </div>
-          <div class="rounded-2xl bg-white p-6 shadow-soft border border-slate-100">
-            <p class="text-sm text-slate-500">Sun • Oct 20 • 2:00 PM</p>
-            <h3 class="mt-2 font-bold">Phonebank for VA‑04</h3>
-            <p class="mt-2 text-slate-600">Help us talk with neighbors and get out the vote.</p>
-            <a href="#volunteer" class="mt-3 inline-block link-cta">RSVP →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="news" class="py-20">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="font-display font-extrabold text-3xl md:text-4xl">News & Updates</h2>
-        <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
-            <p class="text-xs uppercase tracking-widest text-robred font-bold">Press Release</p>
-            <h3 class="mt-2 font-bold text-lg">Rob launches campaign for VA‑04</h3>
-            <p class="mt-2 text-slate-600">Focused on lowering costs, protecting freedoms, and creating good‑paying jobs.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read →</a>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
-            <p class="text-xs uppercase tracking-widest text-robred font-bold">Endorsement</p>
-            <h3 class="mt-2 font-bold text-lg">Local educators back Rob</h3>
-            <p class="mt-2 text-slate-600">Investing in public schools and apprenticeships is how we grow.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read →</a>
-          </article>
-          <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
-            <p class="text-xs uppercase tracking-widest text-robred font-bold">Op‑Ed</p>
-            <h3 class="mt-2 font-bold text-lg">A caregiver’s view on health care</h3>
-            <p class="mt-2 text-slate-600">We can deliver quality care at home without crushing families.</p>
-            <a href="#" class="mt-3 inline-block link-cta">Read →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="donate" class="py-20 bg-gradient-to-b from-white to-slate-50">
-      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        <div class="rounded-2xl bg-white p-6 md:p-8 shadow-soft border border-slate-100">
-          <h3 class="font-display font-extrabold text-2xl">Chip in to power this campaign</h3>
-          <p class="mt-2 text-slate-600">Grassroots donations keep us independent. Thank you.</p>
-          <form class="mt-6 grid grid-cols-3 gap-3" action="#" method="post">
-            <input type="hidden" name="origin" value="donate-module" />
-            <button type="submit" name="amount" value="10" class="btn btn-contrast">$10</button>
-            <button type="submit" name="amount" value="25" class="btn btn-contrast">$25</button>
-            <button type="submit" name="amount" value="50" class="btn btn-contrast">$50</button>
-            <button type="submit" name="amount" value="100" class="btn btn-contrast">$100</button>
-            <button type="submit" name="amount" value="250" class="btn btn-contrast">$250</button>
-            <button type="submit" name="amount" value="500" class="btn btn-contrast">$500</button>
-          </form>
-          <form class="mt-4 flex gap-3" action="#" method="post">
-            <label class="sr-only" for="custom-amount">Custom amount</label>
-            <input id="custom-amount" name="custom_amount" type="number" min="1" step="1" placeholder="Custom amount" class="w-full rounded-xl border border-slate-300 px-4 py-3" />
-            <button class="btn btn-primary">Donate</button>
-          </form>
-          <p class="mt-3 text-xs text-slate-500">Donations are processed securely. Contributions are not tax‑deductible.</p>
-        </div>
-
-        <div id="volunteer" class="rounded-2xl bg-night text-white p-6 md:p-8 shadow-soft">
-          <h3 class="font-display font-extrabold text-2xl">Volunteer with Team Rob</h3>
-          <p class="mt-2 text-white/80">Knock doors, make calls, host a house party — there’s a role for everyone.</p>
-          <form class="mt-6 grid gap-3" action="#" method="post">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div>
-                <label class="sr-only" for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Full name" required class="w-full rounded-xl border border-slate-700 bg-transparent px-4 py-3 placeholder:text-white/60" />
-              </div>
-              <div>
-                <label class="sr-only" for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="Email" required class="w-full rounded-xl border border-slate-700 bg-transparent px-4 py-3 placeholder:text-white/60" />
-              </div>
-            </div>
-            <div>
-              <label class="sr-only" for="zip">ZIP</label>
-              <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="ZIP code" class="w-full rounded-xl border border-slate-700 bg-transparent px-4 py-3 placeholder:text-white/60" />
-            </div>
-            <div>
-              <label class="sr-only" for="interests">How would you like to help?</label>
-              <select id="interests" name="interests" class="w-full rounded-xl border border-slate-700 bg-transparent px-4 py-3">
-                <option class="text-slate-900" value="canvass">Canvass</option>
-                <option class="text-slate-900" value="phonebank">Phonebank</option>
-                <option class="text-slate-900" value="host">Host a house party</option>
-                <option class="text-slate-900" value="tech">Tech & data</option>
-              </select>
-            </div>
-            <button class="btn btn-primary w-full">Count me in</button>
-            <p class="text-xs text-white/70">By providing your info you consent to receive campaign communications. Opt out anytime.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16">
-      <div class="max-w-3xl mx-auto px-4 text-center">
-        <h3 class="font-display font-extrabold text-2xl">Stay in the loop</h3>
-        <p class="mt-2 text-slate-600">Get campaign updates, events, and ways to help.</p>
-        <form class="mt-5 flex flex-col sm:flex-row gap-3 justify-center" action="#" method="post">
-          <label for="email2" class="sr-only">Email</label>
-          <input id="email2" name="email" type="email" placeholder="Email address" required class="w-full sm:w-80 rounded-xl border border-slate-300 px-4 py-3" />
-          <button class="btn btn-primary">Sign up</button>
-        </form>
-      </div>
-    </section>
-
-    <footer class="border-t border-slate-200 bg-white">
-      <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center gap-3">
-            <img id="footer-long-logo" src="/assets/long-logo.svg" alt="Rob Tompkins" class="h-9 w-9" />
-          </div>
-          <p class="mt-3 text-sm text-slate-600">Website built by Rob Tompkins.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold">Campaign</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="hover:text-robblue" href="#issues">Issues</a></li>
-            <li><a class="hover:text-robblue" href="#about">About</a></li>
-            <li><a class="hover:text-robblue" href="#events">Events</a></li>
-            <li><a class="hover:text-robblue" href="#news">News</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold">Get Involved</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="hover:text-robblue" href="#donate">Donate</a></li>
-            <li><a class="hover:text-robblue" href="#volunteer">Volunteer</a></li>
-            <li><a class="hover:text-robblue" href="#">Shop</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold">Follow</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="hover:text-robblue" href="https://github.com/chtompki" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a class="hover:text-robblue" href="https://www.linkedin.com/in/chtompki" target="_blank" rel="noopener">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bg-slate-50 text-xs text-slate-500 py-4">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>© <span id="yearSpan"></span> Rob Tompkins for Congress</p>
-          <div class="flex items-center gap-4">
-            <a class="hover:text-robblue" href="#">Privacy</a>
-            <a class="hover:text-robblue" href="#">Terms</a>
-            <a class="hover:text-robblue" href="#">Accessibility</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-  </body>
 </html>
