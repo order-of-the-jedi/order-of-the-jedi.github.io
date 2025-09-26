@@ -60,6 +60,10 @@ img {
     color: #167fbf !important;
 }
 
+.bg-blue a:hover {
+    color: #ffffff !important;
+}
+
 .nav-link a {
     color: #167fbf;
 }
