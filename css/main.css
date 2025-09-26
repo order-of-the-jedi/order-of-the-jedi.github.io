@@ -3,8 +3,13 @@ img {
     height: auto;
 }
 
-.bg-blue {
-    background-color: #14386e !important;
+#truth-trust-respect-bg {
+    background: #000000;
+    opacity: 85%;
+}
+
+#truth-trust-respect-bg card{
+    opacity: 100%;
 }
 
 .bg-blue a {
