@@ -8,8 +8,8 @@ img {
     opacity: 85%;
 }
 
-#truth-trust-respect-bg card{
-    opacity: 100%;
+.bg-blue {
+    background-color: #14386e !important;
 }
 
 .bg-blue a {
