@@ -8,6 +8,20 @@ img {
     opacity: 85%;
 }
 
+#family-photo {
+    border-radius: 8px;
+    border: #000000 4px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lead {
+    font-size: 12px;
+}
+
+.bg-blue {
+    background-color: #14386e !important;
+}
+
 .bg-blue {
     background-color: #14386e !important;
 }
